@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 210 73% 15%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -34,35 +35,25 @@
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* SkillForge Custom Colors */
+    --stellar-navy: 210 73% 15%;
+    --plasma-coral: 10 83% 68%;
+    --magnet-green: 141 84% 39%;
+    --neutral-gray: 0 0% 95%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 210 73% 15%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 210 73% 15%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 210 73% 15%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 73% 15%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -79,14 +70,6 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -97,5 +80,43 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .stellar-navy {
+    background-color: hsl(var(--stellar-navy));
+  }
+  
+  .plasma-coral {
+    background-color: hsl(var(--plasma-coral));
+  }
+  
+  .magnet-green {
+    background-color: hsl(var(--magnet-green));
+  }
+  
+  .neutral-gray {
+    background-color: hsl(var(--neutral-gray));
+  }
+  
+  .text-stellar-navy {
+    color: hsl(var(--stellar-navy));
+  }
+  
+  .text-plasma-coral {
+    color: hsl(var(--plasma-coral));
+  }
+  
+  .text-magnet-green {
+    color: hsl(var(--magnet-green));
+  }
+  
+  .border-plasma-coral {
+    border-color: hsl(var(--plasma-coral));
+  }
+  
+  .border-magnet-green {
+    border-color: hsl(var(--magnet-green));
   }
 }
